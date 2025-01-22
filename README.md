@@ -13,6 +13,13 @@ A gamified study time management application that helps you balance study sessio
 - 💪 Motivational quotes during study sessions
 - 🎵 Sound effects and animations
 - 📱 Mobile-friendly design
+- Set custom study session durations
+- Earn coins for completed study sessions
+- Exchange coins for free time
+- Track daily study progress
+- View study history
+- Fullscreen mode for better focus
+- Motivational quotes during study sessions
 
 ## Tech Stack
 
@@ -27,8 +34,8 @@ A gamified study time management application that helps you balance study sessio
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/study-game.git
-cd study-game
+git clone https://github.com/izhan0102/IezyStudy2.git
+cd IezyStudy2
 ```
 
 2. Install dependencies:
@@ -38,10 +45,10 @@ npm install
 
 3. Start the server:
 ```bash
-node server.js
+npm start
 ```
 
-4. Open in browser:
+4. Open your browser and navigate to:
 ```
 http://localhost:3000
 ```
@@ -60,7 +67,7 @@ This project is configured for deployment on Vercel. Simply connect your GitHub 
 
 ## License
 
-MIT
+ISC
 
 ## Author
 
