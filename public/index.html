@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IezyStudy - Study Time Management Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>IezyStudy 📚</h1>
+            <div class="stats">
+                <div class="coins">
+                    <span>🪙 Coins:</span>
+                    <span id="coinCount">0</span>
+                </div>
+                <div class="free-time">
+                    <span>⌛ Free Time:</span>
+                    <span id="youtubeMinutes">0</span> min
+                </div>
+                <div class="today-study">
+                    <span>📊 Today's Study:</span>
+                    <span id="todayStudy">0</span> min
+                </div>
+            </div>
+            <div class="coin-info">
+                <span class="pixel-text">1 Coin = 1 Minute of Free Time!</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="timer-section">
+                <button id="fullscreenBtn" class="btn fullscreen-btn">📺 Go Fullscreen</button>
+                <div class="timer-display">
+                    <div class="timer" id="timer">25:00</div>
+                    <div class="timer-progress">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                    <div class="motivational-quote">
+                        <p id="motivationalQuote" class="pixel-text"></p>
+                    </div>
+                </div>
+                
+                <div class="time-options">
+                    <button class="time-btn pixel-btn" data-time="15">
+                        <div class="time">15 min</div>
+                        <div class="reward">+5 coins</div>
+                    </button>
+                    <button class="time-btn pixel-btn" data-time="30">
+                        <div class="time">30 min</div>
+                        <div class="reward">+10 coins</div>
+                    </button>
+                    <button class="time-btn pixel-btn" data-time="45">
+                        <div class="time">45 min</div>
+                        <div class="reward">+15 coins</div>
+                    </button>
+                    <button class="time-btn pixel-btn" data-time="60">
+                        <div class="time">60 min</div>
+                        <div class="reward">+20 coins</div>
+                    </button>
+                </div>
+
+                <div class="timer-controls">
+                    <button id="startBtn" class="btn primary pixel-btn">▶ Start</button>
+                    <button id="pauseBtn" class="btn secondary pixel-btn" disabled>⏸ Pause</button>
+                    <button id="resetBtn" class="btn danger pixel-btn" disabled>↺ Reset</button>
+                </div>
+            </div>
+
+            <div class="rewards-section">
+                <h2>Free Time Bank 🎮</h2>
+                <div class="youtube-controls">
+                    <button id="startYoutubeBtn" class="btn youtube pixel-btn" disabled>▶ Start Free Time</button>
+                    <button id="pauseYoutubeBtn" class="btn youtube pixel-btn" disabled>⏸ Pause Free Time</button>
+                </div>
+                <div id="youtubeTimer" class="youtube-timer">00:00</div>
+            </div>
+
+            <div class="study-history">
+                <h3>Study History 📈</h3>
+                <div id="historyList" class="history-list"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Developed with ❤️ by Izhan</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> 

@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pixel-border: 4px;
+    --main-color: #00ff9d;
+    --bg-color: #1e1e2e;
+    --text-color: #fff;
+    --accent-color: #ff3e3e;
+    --secondary-color: #ffd700;
+}
+
+body {
+    background: linear-gradient(135deg, var(--bg-color), #2d2d4d);
+    color: var(--text-color);
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: var(--pixel-border);
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 20px rgba(0, 255, 157, 0.2);
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--main-color);
+    text-shadow: 0 0 15px rgba(0, 255, 157, 0.5);
+    line-height: 1.4;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.coin-info {
+    margin-top: 1rem;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.pixel-text {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+}
+
+.coins, .free-time, .today-study {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.8rem 1.2rem;
+    border-radius: var(--pixel-border);
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 15px rgba(0, 255, 157, 0.2);
+}
+
+.timer-section {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--pixel-border);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border: 2px solid var(--main-color);
+    box-shadow: 0 8px 32px rgba(0, 255, 157, 0.2);
+}
+
+.timer-display {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.motivational-quote {
+    margin-top: 1.5rem;
+    min-height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.motivational-quote p {
+    color: var(--secondary-color);
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    transition: opacity 0.5s ease-in-out;
+    font-size: 0.8rem;
+    max-width: 80%;
+    margin: 0 auto;
+    line-height: 1.4;
+}
+
+.timer {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3.5rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(0, 255, 157, 0.6);
+}
+
+.timer-progress {
+    width: 100%;
+    height: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--pixel-border);
+    overflow: hidden;
+    border: 2px solid var(--main-color);
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
+    transition: width 1s linear;
+}
+
+.timer-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: var(--pixel-border);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.pixel-btn {
+    border: 2px solid;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.pixel-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.2);
+}
+
+.pixel-btn:active {
+    transform: translateY(2px);
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.primary {
+    background: var(--main-color);
+    color: var(--bg-color);
+    border-color: #00cc7d;
+}
+
+.secondary {
+    background: var(--accent-color);
+    color: white;
+    border-color: #cc3232;
+}
+
+.danger {
+    background: #393e46;
+    color: white;
+    border-color: #2a2e33;
+}
+
+.youtube {
+    background: var(--accent-color);
+    color: white;
+    border-color: #cc3232;
+}
+
+.fullscreen-btn {
+    background: var(--secondary-color);
+    color: var(--bg-color);
+    border-color: #cca900;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.time-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.time-btn {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--main-color);
+    border-radius: var(--pixel-border);
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.time-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 157, 0.3);
+}
+
+.time-btn.active {
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 20px var(--main-color);
+}
+
+.time-btn .reward {
+    color: var(--secondary-color);
+    font-size: 0.6rem;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+.rewards-section {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--pixel-border);
+    padding: 1.5rem;
+    text-align: center;
+    border: 2px solid var(--main-color);
+    margin-bottom: 2rem;
+}
+
+.rewards-section h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    text-shadow: 0 0 10px rgba(0, 255, 157, 0.4);
+}
+
+.youtube-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.youtube-timer {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    text-shadow: 0 0 10px rgba(255, 62, 62, 0.5);
+}
+
+.study-history {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--pixel-border);
+    padding: 1.5rem;
+    border: 2px solid var(--main-color);
+}
+
+.study-history h3 {
+    font-family: 'Press Start 2P', cursive;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 255, 157, 0.4);
+}
+
+.history-list {
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: var(--pixel-border);
+}
+
+.history-item {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+}
+
+.history-item.today {
+    background: rgba(0, 255, 157, 0.1);
+    border: 1px solid var(--main-color);
+    border-radius: var(--pixel-border);
+    color: var(--main-color);
+    text-shadow: 0 0 10px rgba(0, 255, 157, 0.4);
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    border-top: 2px solid var(--main-color);
+}
+
+footer p {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    color: var(--main-color);
+    text-shadow: 0 0 10px rgba(0, 255, 157, 0.4);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.timer.active {
+    animation: pulse 2s infinite;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .timer {
+        font-size: 2.5rem;
+    }
+    
+    .btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.7rem;
+    }
+    
+    .time-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stats {
+        font-size: 0.9rem;
+    }
+    
+    .rewards-section h2 {
+        font-size: 1rem;
+    }
+    
+    .youtube-timer {
+        font-size: 1.2rem;
+    }
+    
+    .coin-info {
+        font-size: 0.6rem;
+    }
+} 
